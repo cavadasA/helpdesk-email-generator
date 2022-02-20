@@ -33,14 +33,17 @@ export default function LeftSide() {
                 </div>
             </div>
             <div className='mail-row row justify-content-end py-2'>
-                <div className='col-4 d-grid gap-2'>
+                <div className='col-3 d-grid gap-2'>
                     <Button type='button' className='btn btn-primary' onClick={() => store.dispatch(changeMailNumber(1))}>1º email</Button>
                 </div>
-                <div className='col-4 d-grid gap-2'>
+                <div className='col-3 d-grid gap-2'>
                     <Button type='button' className='btn btn-primary' onClick={() => store.dispatch(changeMailNumber(2))}>2º email</Button>
                 </div>
-                <div className='col-4 d-grid gap-2'>
+                <div className='col-3 d-grid gap-2'>
                     <Button type='button' className='btn btn-primary' onClick={() => store.dispatch(changeMailNumber(3))}>Mail de cierre</Button>
+                </div>
+                <div className='col-3 d-grid gap-2'>
+                    <Button type='button' className='btn btn-primary' onClick={() => store.dispatch(changeMailNumber(4))}>Resolución</Button>
                 </div>
             </div>
             <div className='input-row row py-2'>
