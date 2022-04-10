@@ -15,7 +15,7 @@ export default function LeftSide() {
         <div className='container'>
             <div className='top-row row justify-content-end py-2'>
                 <div className='col-6 d-grid gap-2'>
-                    <Button type='button' className='btn btn-primary' onClick={() => store.dispatch(changeLanguage("english"))}>Ingles</Button>
+                    <Button type='button' className='btn btn-primary' onClick={() => store.dispatch(changeLanguage("english"))}>Inglés</Button>
                 </div>
                 <div className='col-6 d-grid gap-2'>
                     <Button type='button' className='btn btn-primary' onClick={() => store.dispatch(changeLanguage("spanish"))}>Español</Button>
@@ -52,6 +52,7 @@ export default function LeftSide() {
                         <Dropdown.Item as="button" onClick={() => store.dispatch(changeInstruction("nada"))}>Nada</Dropdown.Item>
                         <Dropdown.Item as="button" onClick={() => store.dispatch(changeInstruction("blackboard"))}>Blackboard</Dropdown.Item>
                         <Dropdown.Item as="button" onClick={() => store.dispatch(changeInstruction("zoom"))}>Zoom</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={() => store.dispatch(changeInstruction("yourPhoto"))}>Your Photo</Dropdown.Item>
                         <Dropdown.Item as="button" onClick={() => store.dispatch(changeInstruction("remoto"))}>Conectar en remoto</Dropdown.Item>
                     </DropdownButton>
                 </div>
@@ -62,7 +63,7 @@ export default function LeftSide() {
                         className="btn btn-success"
                         onClick={() =>
                             navigator.clipboard.writeText(
-                                document.getElementById("test").innerText
+                                document.getElementById("emailText").innerText
                             )(alert.show("copiado"))
                         }
                     >

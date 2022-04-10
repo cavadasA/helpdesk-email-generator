@@ -41,3 +41,13 @@ export const blackboardEN = <p><br />In order to acces to https://blackboard.ie.
     <br />Let us know if you succeeded or need further assitance.</p>
 export const remoteConnectionES = <p><br />Hemos intentado contactar contigo sin éxito, nos gustaría revisar el caso en remoto cuando estés disponible.</p>
 export const remoteConnectionEN = <p><br />We've tried to contact you without success, we would like to review the case in remote with you when you have the time.</p>
+export const yourPhotoEN = <p><br />Please try the following steps:
+    <br />- Access through an incognito window to: https://yourphoto.ie.edu/ and upload your photo there.
+    <br />- Make sure the file extension is .jpg
+    <br />- Make sure your photo has at least a 600x600 size
+    <br />- Make sure your photo has a white, homogeneous background.</p>
+export const yourPhotoES = <p><br />Por favor intenta los siguientes pasos:
+    <br />- Accede a través de una ventana de incógnito a: https://yourphoto.ie.edu/ y sube tu foto allí.
+    <br />- Asegúrate de que la extensión del archivo sea .jpg
+    <br />- Asegúrate de que tu foto tenga al menos un tamaño de 600x600
+    <br />- Asegúrate de que tu foto tenga un fondo blanco y homogéneo.</p>

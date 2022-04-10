@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from "react-redux";
-import { zoomEN, zoomES, blackboardEN, blackboardES, remoteConnectionEN, remoteConnectionES } from './instrucciones';
+import { zoomEN, zoomES, blackboardEN, blackboardES, remoteConnectionEN, remoteConnectionES, yourPhotoEN, yourPhotoES } from './instrucciones';
 
 function padTo2Digits(num) {
     return num.toString().padStart(2, '0');
@@ -27,13 +27,14 @@ export default function RightSide() {
     return (
         <div className='row px-4'>
             <div className='col-12 border'>
-                {language === "spanish" ? <div className='text-start' id='test'>
+                {language === "spanish" ? <div className='text-start' id='emailText'>
                     {mailNumber === 1 || mailNumber === 2 || mailNumber === 3 ? "Estimado " + name + "," : currentHour < 12 ? "Buenos días," : "Buenas tardes,"}
                     <br />
                     {instruction === "nada" || instruction === "" ? <br /> :
                         instruction === "blackboard" ? blackboardES :
                             instruction === "zoom" ? zoomES :
-                                instruction === "remoto" ? remoteConnectionES : ""
+                                instruction === "remoto" ? remoteConnectionES :
+                                    instruction === "yourPhoto" ? yourPhotoES : ""
                     }
                     {mailNumber === 1 || mailNumber === 2 ? "Tras la apertura de su " + (ticket.charAt(0) === "I" ? "incidencia " : ticket.charAt(0) === "S" ? "petición " : "") + ticket + " el día " + (date === "NaN/NaN/NaN" ? "" : date) + ", le solicitamos que, por favor, contacte con nosotros lo antes posible a través del teléfono +34 91 568 96 23, o bien, que nos facilite un número de contacto y una franja horaria en la que podamos llamarle para poder continuar con la resolución de su " + (ticket.charAt(0) === "I" ? "incidencia." : ticket.charAt(0) === "S" ? "petición." : "") : mailNumber === 3 ? "Le contactamos en relación a su " + (ticket.charAt(0) === "I" ? "incidencia " : ticket.charAt(0) === "S" ? "petición " : "") + ticket + ". Tras haber intentado contactar con usted y no haber recibido respuesta por su parte, le informamos que procedemos al cierre de su ticket." : "Una vez solventada la " + (ticket.charAt(0) === "I" ? "incidencia " : ticket.charAt(0) === "S" ? "petición " : "") + "procedemos a dar por finalizado el ticket."}
                     <br />
@@ -48,13 +49,14 @@ export default function RightSide() {
                     <br />
                     IT Support.
                 </div> :
-                    <div className='text-start' id='test'>
+                    <div className='text-start' id='emailText'>
                         {mailNumber === 1 || mailNumber === 2 || mailNumber === 3 ? "Dear " + name + "," : currentHour < 12 ? "Good morning," : "Good afternoon,"}
                         <br />
                         {instruction === "nada" || instruction === "" ? <br /> :
                             instruction === "blackboard" ? blackboardEN :
                                 instruction === "zoom" ? zoomEN :
-                                    instruction === "remoto" ? remoteConnectionEN : ""
+                                    instruction === "remoto" ? remoteConnectionEN :
+                                        instruction === "yourPhoto" ? yourPhotoEN : ""
                         }
                         {mailNumber === 1 || mailNumber === 2 ? "After the opening of your " + (ticket.charAt(0) === "I" ? "incident " : ticket.charAt(0) === "S" ? "request " : "") + ticket + " the day " + (date === "NaN/NaN/NaN" ? "" : date) + ", we cordially request for you to contact us as soon as possible through the phone number +34 91 568 96 23 or you could facilitate a contact number and timeframe in which we could give you a call to continue with the resolution of the " + (ticket.charAt(0) === "I" ? "incident." : ticket.charAt(0) === "S" ? "request." : "") : mailNumber === 3 ? "We contact you in relation with your " + (ticket.charAt(0) === "I" ? "incident " : ticket.charAt(0) === "S" ? "request " : "") + ticket + ". After trying to reach you and not receiving any answer on your behalf, we inform you that we will proceed with the closure of your ticket." : "Since the " + (ticket.charAt(0) === "I" ? "incident " : ticket.charAt(0) === "S" ? "request " : "") + "is solved we proceed to close the ticket."}
                         <br />
